@@ -49,3 +49,16 @@
 //     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 //     xhr.send(param)
 // }
+
+//fetch a number of quotes generated randomly
+fetch(`https://goquotes-api.herokuapp.com/api/v1/random?count=${number}`)
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(err => console.log(err));
+
+//fetch the names of authors you can select from 
+fetch(`https://goquotes-api.herokuapp.com/api/v1/all/authors`)
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(err => console.log(err));
+
