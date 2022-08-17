@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/landing.css">
+    <title>Quotes</title>
+</head>
+<body>
+    <header>
+        <div></div>
+    </header>
+    <main>
+        <div>
+            <div class="form-container">
+                <form class="search-form" action="/generate-quote" method="post" id="searchForm">
+                    <div class="autocomplete">
+                        <input id="queryInput" type="text" placeholder="Your favourite author is ..."/>
+                    </div>
+                    <button id="searchBtn" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+        <div class="quote-container">
+            <div class="quote-text-container">
+                <div class="qoute-notaion-right">
+                    <img class="quote-notation" src="../public/assets/img/upper_quote.png" alt="right quote notation"/>
+                </div>
+                <div class="quote">
+                    <p id="quoteText" class="quote-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum varius sit amet mattis vulputate enim nulla aliquet porttitor. Viverra accumsan in nisl nisi scelerisque eu ultrices vitae auctor.
+                    </p>
+                </div>
+                <div class="qoute-notaion-left">
+                    <img class="quote-notation" src="../public/assets/img/lower_quote.png" alt="left quote notation"/>
+                </div>
+            </div>
+            <div id="author">
+                <h3>-Lorem ipsum</h4>
+            </div>
+        </div>
+        <div class="figure-container">
+            <img id="authorPic" src="../public/assets/img/author_pic.png" alt="Autoher Picture"/>
+        </div>
+    </main>
+    <footer>
+        <div></div>
+    </footer>
+    <script src="../js/logic.js" type="application/javascript"></script>
+    <script src="./js/dom.js"></script>
+</body>
+</html>
