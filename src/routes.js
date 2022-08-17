@@ -1,6 +1,4 @@
-const { appendFile } = require("fs");
 const path = require("path");
-
 
 
 const clientErrors = (req, res) => {

@@ -1,6 +1,5 @@
 const express = require('express');
-const { appendFile } = require('fs');
- 
+ const fetch = require('node-fetch')
 
 
 const path = require('path');
@@ -11,31 +10,21 @@ const port = process.env.PORT||4003;
 
 const {serverError, clientErrors} = require('./routes')
 
-
-
-
-
-// routes codes
-app.use((req,res,next)=>{
-  console.log(req.url);
-  next();
-})
-
-
-
-
 app.use(express.static(path.join(__dirname,'..', 'public')));
 
-
 app.get('/authors/:athName',(req,res) => {
-  console.log(req.params.athName);
+  fetch(`https://goquotes-api.herokuapp.com/api/v1/random?count=100`)
+.then(response =>{
+  return  response.json()
 })
-
-
-app.use("/api",() => {
-  throw new Error('not implemented');
-});
-
+.then(data => {
+  const arr2 = data.quotes.filter((ele)=>{
+    return ele.author === req.params.athName
+  });
+  res.json(arr2)
+})
+.catch(err => console.log(err, "err"));
+})
 
 
 app.use(clientErrors);
