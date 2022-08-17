@@ -1,4 +1,121 @@
 *{
-    margin: 0;
-    padding: 0;
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+p{
+    font-size: 1.8em;
+}
+header{
+    height: 10%;
+    width: 100%;
+    background-color: blanchedalmond;
+}
+
+form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    flex-flow:column nowrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.autocomplete{
+    width: 80%;
+    height: 100%;
+    margin: 10px 20px;
+    position: relative;
+    display: inline-block;
+}
+
+#queryInput{
+    width: 100%;
+    height: 100%;
+    padding: 15px 0px 15px 15px;
+    border: 1px solid blanchedalmond;
+    border-radius: 16px;
+}
+
+#searchBtn{
+    width: 10%;
+    min-width: 128px;
+    height: 100%;
+    margin: 10px;
+    background-color: transparent;
+    padding: 15px;
+    border: 1px solid blanchedalmond;
+    border-radius: 16px;
+}
+
+#searchBtn:hover{
+    background-color: blanchedalmond;
+    padding: 15px;
+    border: 1px solid blanchedalmond;
+    color: white;
+    border-radius: 16px;
+}
+.quote-container{
+    width: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+.quote-text-container{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin: 20px 0px;
+}
+.quote{
+    width: 100%;
+    margin: 20px 10px 20px 10px;
+
+}
+.quote-text{
+   width: 100%;
+   text-align: justify;
+}
+.quote-notation{
+    height: 1.5em;
+    width: 1.5em;
+}
+.qoute-notaion-left{
+    margin-top: auto;
+}
+#author{
+    align-self: flex-end;
+}
+.form-container{
+    height: 40%;
+    width: 100%;
+}
+
+.figure-container{
+    width: 20%;
+    height: 20%;
+    align-self: flex-end;
+}
+#authorPic{
+    width: 100%;
+    height: 100%;
+}
+
+footer{
+    width: 100%;
+    height: 10%;
+    background-color: blanchedalmond;
 }
