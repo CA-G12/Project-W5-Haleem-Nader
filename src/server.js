@@ -19,7 +19,7 @@ app.get('/authors/:athName',(req,res) => {
 })
 .then(data => {
   const arr2 = data.quotes.filter((ele)=>{
-    return ele.author === req.params.athName;
+    return ele.author.toLowerCase() === req.params.athName.toLocaleLowerCase();
   });
   res.json(arr2)
 })
