@@ -214,3 +214,12 @@ body {
     justify-content: center;
     text-align: center;
 }
+.headerList{
+    padding: 20px;
+    font-size: 25px;
+    justify-content: center;
+    text-align: center;
+    background-color: blanchedalmond;
+    margin-bottom: 20px;
+    font: normal 2rem var(--font-head);
+}
