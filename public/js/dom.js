@@ -9,15 +9,14 @@ btnSearch.addEventListener("click",(e) => {
     e.preventDefault();
     fetch(`/authors/${quieryInput.value}`)
     .then(data => data.json())
-    .then(result => console.log(result));
+    .then(result => dom(result[0]));
 })
-// quieryInput.addEventListener("keypress",)
 
-const dom = {
-    renderPage(quoteText,authorName,authorImgURL){
-        quote.textContent = quoteText
-        author.textContent = authorName
-        authorPic.attributes.src = authorImgURL
-    },
 
+const dom = (data) => {
+    console.log(data);
+    // ensert you data into the DOM 
+    quote.textContent = data.text;
+    author.textContent = '-'+data.author;
+    
 }
